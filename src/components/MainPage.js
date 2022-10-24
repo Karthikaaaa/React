@@ -6,15 +6,7 @@ import DisplayDetails from './DisplayDetails';
 
 const MainPage = () => {
   const [pageValues, setPageValue] = React.useState({});
-  const [savedData, setSavedData] = React.useState({
-    firstName: 'dsasad',
-    lastName: 'dsa',
-    displayName: 'dsada',
-    personalPhone: 342423,
-    officePhone: 342323423,
-    email: 'dsa@.com',
-    location: 'india',
-  });
+  const [savedData, setSavedData] = React.useState({});
   const [savedId, setSavedId] = React.useState('');
 
   const handleOnChange = (e) => {
