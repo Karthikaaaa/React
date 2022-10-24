@@ -22,14 +22,12 @@ const MainPage = () => {
     setSavedData({});
   };
   const handleOnClick = () => {
-    console.log('Onclick', pageValues, savedId);
     if (savedId) {
       axios
         .put(`profile/${savedId}`, pageValues)
         .then((res) => {
           setSavedData(pageValues);
           setPageValue({});
-          console.log(res);
         })
         .catch((error) => console.log('error', error));
     } else {
@@ -39,12 +37,10 @@ const MainPage = () => {
           setSavedData(pageValues);
           setSavedId(res.data);
           setPageValue({});
-          console.log(res);
         })
         .catch((error) => console.log('error', error));
     }
   };
-  console.log('state', savedData, pageValues);
   return (
     <React.Fragment>
       <div className="flex ">
