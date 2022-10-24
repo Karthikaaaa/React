@@ -1,37 +1,35 @@
 import React from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
-import PersonIcon from '@mui/icons-material/Person';
-
+import {Person,  Home, GridView, MapsUgcRounded, Article, CorporateFare, Settings, Description} from '@mui/icons-materials';
 import Logo from '.././assets/logo.jpg';
-
 
 const homeDetails = [
     {
-      icon: <PersonIcon />,
+      icon: < Home />,
       value: 'Home',
     },
     {
-      icon: <PersonIcon />,
+      icon: <Description />,
       value: 'Projects',
     },
     {
-      icon: <PersonIcon />,
+      icon: <GridView />,
       value: 'Dashboard',
     },
     {
-      icon: <PersonIcon />,
+      icon: <MapsUgcRounded />,
       value: 'Messages',
     },
     {
-      icon: <PersonIcon />,
+      icon: <Article />,
       value: 'Documents',
     },
     {
-      icon: <PersonIcon />,
+      icon: <CorporateFare />,
       value: 'Organization',
     },
     {
-      icon: <PersonIcon />,
+      icon: <Settings />,
       value: 'Settings',
     },
   ];
