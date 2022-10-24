@@ -32,6 +32,9 @@
 .mt-2{
   margin-top: 2rem;
 }
+.mt-1{
+  margin-top: 1rem;
+}
 .mt-3{
   margin-top: 3rem;
 }
@@ -59,4 +62,37 @@
 .text-center{
   text-align: center;
 
+}
+.gm{
+  font-size: 24px;
+  font-weight: bold;
+}
+.date{
+  font-size: 20px;
+  color: grey;
+}
+
+.ml-5{margin-left: 5rem;}
+.pt-2{padding-left: 2rem;}
+.details{
+width: 23%;
+}
+
+.name{
+  font-size: 18px;
+  font-weight: bold;
+}
+.email{
+  font-size: 16px;
+  color: grey;
+}
+
+.mbt-auto{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.displayHeading{
+font-size: 9px;
+text-align: left;
+color: black;
 }

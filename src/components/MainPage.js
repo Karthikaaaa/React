@@ -1,15 +1,20 @@
 import React from 'react';
-import { Button } from '@mui/material';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-
 import axios from '../axios';
 import SideNav from './SideNav';
 import ProfileDetails from './ProfileDetails';
-import PersonIcon from '@mui/icons-material/Person';
+import DisplayDetails from './DisplayDetails';
 
 const MainPage = () => {
   const [pageValues, setPageValue] = React.useState({});
-  const [savedData, setSavedData] = React.useState({});
+  const [savedData, setSavedData] = React.useState({
+    firstName: 'dsasad',
+    lastName: 'dsa',
+    displayName: 'dsada',
+    personalPhone: 342423,
+    officePhone: 342323423,
+    email: 'dsa@.com',
+    location: 'india',
+  });
   const [savedId, setSavedId] = React.useState('');
 
   const handleOnChange = (e) => {
@@ -51,39 +56,8 @@ const MainPage = () => {
           pageValues={pageValues}
           handleOnClick={handleOnClick}
         />
-        <div>
-          <div className="flex spaceBetween">
-           {/*  <Button variant="contained">+ Add Project</Button> */}
-            <div className="ml-2">
-              <Button
-                id="demo-customized-button"
-                variant="text"
-                disableElevation
-                endIcon={<KeyboardArrowDownIcon />}
-              >
-                <div className="flex">
-                  <PersonIcon />
-                  <div className="ml-1">
-                    <div>{savedData.displayName}</div>
-                    <div>Project Manager</div>
-                  </div>
-                </div>
-              </Button>
-            </div>
-          </div>
 
-          {Object.keys(savedData).length > 0&&<><PersonIcon className='mt-3'/>
-          <div className='text-center'>{savedData.firstName} {savedData.lastName}</div>
-          <div className='text-center'>{savedData.email}</div>
-          <div className='text-center'>
-            
-          <Button variant="outlined" onClick={handleOnEdit}>
-                Edit Details
-              </Button></div>
-          </>}
-
-          </div>
-        
+        <DisplayDetails savedData={savedData} handleOnEdit={handleOnEdit} />
       </div>
     </React.Fragment>
   );
