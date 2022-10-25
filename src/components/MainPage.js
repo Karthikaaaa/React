@@ -49,7 +49,7 @@ const MainPage = () => {
           handleOnClick={handleOnClick}
         />
 
-        <DisplayDetails savedData={savedData} handleOnEdit={handleOnEdit} />
+       {Object.keys(savedData).length > 0&& <DisplayDetails savedData={savedData} handleOnEdit={handleOnEdit} />}
       </div>
     </React.Fragment>
   );
