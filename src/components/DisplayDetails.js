@@ -6,8 +6,8 @@ import UploadImage from '../assets/uploadImage.jpeg';
 import DisplayImage from '../assets/displayImage.jpeg';
 import Theme from './models/Theme';
 const DisplayDetails = ({ savedData, handleOnEdit }) => {
-    const [open,setOpen]=useState(false)
-const openDetails=()=>setOpen((previousData)=>!previousData)
+    const [open,setOpen]=useState(true)
+    const openDetails=()=>setOpen((previousData)=>!previousData)
     return (
         <div className=" details">
           <div className="flex">
