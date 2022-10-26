@@ -58,6 +58,8 @@
 .save {
   text-align: center;
   margin-top: 5rem;
+  display: flex;
+  justify-content: space-evenly
 }
 .text-center{
   text-align: center;

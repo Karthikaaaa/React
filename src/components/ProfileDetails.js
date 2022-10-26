@@ -5,7 +5,7 @@ import { FormFields } from './models/FormFields';
 import { Button, InputAdornment, Card, CardContent } from '@mui/material';
 import Theme from './models/Theme';
 
-const ProfileDetails = ({ savedData, handleOnChange, pageValues, handleOnClick }) => {
+const ProfileDetails = ({ savedData, handleOnChange, pageValues, handleOnClick,onClickReset }) => {
   return (
     <div className="centerDiv">
       <div className="greetings mt-1">
@@ -50,6 +50,11 @@ const ProfileDetails = ({ savedData, handleOnChange, pageValues, handleOnClick }
           </div>
         </CardContent>
         <div className="save mb-1">
+          <Theme>
+          <Button variant="outlined" color="red" onClick={onClickReset}>
+                  Reset
+                </Button>
+          </Theme>
           <Theme>
             <Button variant="contained" color="red" onClick={handleOnClick}>
               Save Changes

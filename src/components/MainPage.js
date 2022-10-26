@@ -7,16 +7,18 @@ import DisplayDetails from './DisplayDetails';
 const MainPage = () => {
   const [pageValues, setPageValue] = React.useState({});
   const [savedData, setSavedData] = React.useState({});
+  const [resetData, setResetData] = React.useState({});
   const [savedId, setSavedId] = React.useState('');
 
   const handleOnChange = (e) => {
     let attributeName = e.target.name;
     let attributeVal = e.target.value;
     setPageValue({ ...pageValues, [attributeName]: attributeVal });
+    setSavedData({ ...pageValues, [attributeName]: attributeVal });
   };
   const handleOnEdit = () => {
     setPageValue(savedData);
-    setSavedData({});
+    setResetData(savedData);
   };
   const handleOnClick = () => {
     if (savedId) {
@@ -38,6 +40,10 @@ const MainPage = () => {
         .catch((error) => console.log('error', error));
     }
   };
+  const onClickReset=()=>{
+    setPageValue(resetData)
+    setSavedData(resetData)
+  }
   return (
     <React.Fragment>
       <div className="flex ">
@@ -47,6 +53,7 @@ const MainPage = () => {
           handleOnChange={handleOnChange}
           pageValues={pageValues}
           handleOnClick={handleOnClick}
+          onClickReset={onClickReset}
         />
 
        {Object.keys(savedData).length > 0&& <DisplayDetails savedData={savedData} handleOnEdit={handleOnEdit} />}

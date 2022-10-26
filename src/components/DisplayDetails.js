@@ -45,7 +45,7 @@ const DisplayDetails = ({ savedData, handleOnEdit }) => {
                 {savedData.firstName} {savedData.lastName}
               </div>
               <div className="mt-1 email">{savedData.email}</div>
-              <div className="mt-1">
+              <div className="mt-1">    
                 <Button variant="outlined" onClick={handleOnEdit}>
                   Edit Details
                 </Button>
