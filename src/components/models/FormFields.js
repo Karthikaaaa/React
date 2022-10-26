@@ -32,13 +32,13 @@ export const FormFields = {
     },
     {
       componentType: 'Text',
-      attributeName: 'Phone Number (work)',
+      attributeName: 'Phone Number (Personal)',
       attributeType: 'personalPhone',
       Icon: <PhoneOutlinedIcon />,
     },
     {
       componentType: 'Text',
-      attributeName: 'Phone Number (Personal)',
+      attributeName: 'Phone Number (work)',
       attributeType: 'officePhone',
       Icon: <PhoneOutlinedIcon />,
     },

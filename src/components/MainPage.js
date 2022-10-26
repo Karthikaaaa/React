@@ -56,7 +56,7 @@ const MainPage = () => {
           onClickReset={onClickReset}
         />
 
-       {Object.keys(savedData).length > 0&& <DisplayDetails savedData={savedData} handleOnEdit={handleOnEdit} />}
+       {Object.keys(savedData).length > 0&& <DisplayDetails savedData={savedData} savedId={savedId} handleOnEdit={handleOnEdit} />}
       </div>
     </React.Fragment>
   );

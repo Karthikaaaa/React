@@ -5,7 +5,7 @@ import { Button } from '@mui/material';
 import UploadImage from '../assets/uploadImage.jpeg';
 import DisplayImage from '../assets/displayImage.jpeg';
 import Theme from './models/Theme';
-const DisplayDetails = ({ savedData, handleOnEdit }) => {
+const DisplayDetails = ({ savedData, handleOnEdit,savedId }) => {
     const [open,setOpen]=useState(true)
     const openDetails=()=>setOpen((previousData)=>!previousData)
     return (
@@ -43,13 +43,16 @@ const DisplayDetails = ({ savedData, handleOnEdit }) => {
               <img src={UploadImage} className="mt-3" alt="UploadImage" />
               <div className="mt-1 name">
                 {savedData.firstName} {savedData.lastName}
+                
               </div>
               <div className="mt-1 email">{savedData.email}</div>
-              <div className="mt-1">    
+              <div className="mt-1 email">{savedData.personalPhone}</div>
+              <div className="mt-1 email">{savedData.officePhone}</div>
+              {savedId!==''&&<div className="mt-1">    
                 <Button variant="outlined" onClick={handleOnEdit}>
                   Edit Details
                 </Button>
-              </div>
+              </div>}
             </div>
           )}
         </div>
